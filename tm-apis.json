@@ -1,0 +1,3781 @@
+{
+  "front-version": "2.6.0",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Project",
+      "id": "D45D8CCA-892A-4896-B52C-749A479F75F5",
+      "lastModified": "2017-07-20T13:36:52.248+12:00",
+      "name": "V3"
+    },
+    {
+      "type": "Service",
+      "id": "3835C09D-7AE3-47EE-B587-1C906B1392F6",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "attachments",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"attachment\": {\n    \"key\": \"${\"s3_uploaded_file_key\"}\"\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/attachments"
+      },
+      "id": "A1F75DCE-CEE7-4D51-ADDA-5F98AC965E5D",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "3835C09D-7AE3-47EE-B587-1C906B1392F6"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/attachments/upload_authorization"
+      },
+      "id": "E065FF71-F189-4A5F-8269-A9FB2CB413E8",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "/upload_authorization #upload_authorization",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "3835C09D-7AE3-47EE-B587-1C906B1392F6"
+    },
+    {
+      "type": "Service",
+      "id": "6BC22173-2E49-4524-97DB-E14F44BE1234",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "categories",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v3",
+        "path": "/categories/{category_id}/subcategories"
+      },
+      "id": "B99E89F4-906F-428B-9B46-AECBAA5D6526",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "{category_id}/subcategories #subcategories",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "6BC22173-2E49-4524-97DB-E14F44BE1234"
+    },
+    {
+      "type": "Service",
+      "id": "5974CD6C-C160-4FC7-9DA4-5CBFFE7DC020",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "channels",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/channels"
+      },
+      "id": "8E6E97D8-6D16-44D9-A3C1-D7C33A6B36D5",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "5974CD6C-C160-4FC7-9DA4-5CBFFE7DC020"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/channels/managable_channels.json"
+      },
+      "id": "3BF8D486-56E3-4EA8-A0CA-6F07A43E1FCE",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "/managable_channels #managable_channels",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "5974CD6C-C160-4FC7-9DA4-5CBFFE7DC020"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/channels/{channel_id}"
+      },
+      "id": "F14F78C3-BB6A-40D6-A4A1-2989A0939E0A",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "/{id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "5974CD6C-C160-4FC7-9DA4-5CBFFE7DC020"
+    },
+    {
+      "type": "Service",
+      "id": "1BF46750-FC3B-48C0-990F-F7B205F3399C",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "devices",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"device\": {\n    \"device_identifier\": \"${\"device_identifier\"}\",\n    \"push_token\": \"${\"push_token\"}\",\n    \"location\": {\n      \"latitude\": ${\"latitude\"},\n      \"longitude\": ${\"longitude\"}\n    }\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/devices"
+      },
+      "id": "842F0176-6CE4-4EA2-B552-4C2695578253",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "enabled": true,
+          "name": "X-Geolocation",
+          "value": "${\"latitude\"},${\"longitude\"}"
+        },
+        {
+          "enabled": true,
+          "name": "app-id",
+          "value": "${\"app_id\"}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "1BF46750-FC3B-48C0-990F-F7B205F3399C"
+    },
+    {
+      "type": "Service",
+      "id": "F7C5BA27-A9D0-4C24-920C-FF6F6C5E7187",
+      "lastModified": "2017-07-20T13:36:52.250+12:00",
+      "name": "notifications",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "mark",
+              "value": "false"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v3",
+        "path": "/notifications"
+      },
+      "id": "70628C78-7A75-478C-9F7B-68C5C60C81B2",
+      "lastModified": "2017-07-20T13:36:52.250+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "F7C5BA27-A9D0-4C24-920C-FF6F6C5E7187"
+    },
+    {
+      "type": "Service",
+      "id": "F92E57A7-81F3-4405-8A6C-716807224290",
+      "lastModified": "2017-07-20T13:36:52.250+12:00",
+      "name": "reportable_channels",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v3",
+        "path": "/reportable_channels"
+      },
+      "id": "FB0D469B-D9BC-4399-9E34-66C9A06A7BDB",
+      "lastModified": "2017-07-20T13:36:52.250+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "F92E57A7-81F3-4405-8A6C-716807224290"
+    },
+    {
+      "type": "Service",
+      "id": "04B26D75-902A-4643-BAD3-54E0A851855A",
+      "lastModified": "2017-07-20T13:36:52.248+12:00",
+      "name": "reports",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"report\": {\n    \"account_id\": {channel_id},\n    \"address\": \"53 hazlewood avenue. Karori. Wellington. New Zealand\"\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v3",
+        "path": "/reports.json"
+      },
+      "id": "9C87306D-A571-44CE-91ED-3B6F46FB9189",
+      "lastModified": "2017-07-20T13:36:52.248+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "04B26D75-902A-4643-BAD3-54E0A851855A"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "account_id",
+              "value": "{channel_id}"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/reports.json"
+      },
+      "id": "347AC938-C36E-4A3B-A60E-7355870B1B82",
+      "lastModified": "2017-07-20T13:36:52.248+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "04B26D75-902A-4643-BAD3-54E0A851855A"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/reports/{report_id}.json"
+      },
+      "id": "AC3B64B1-CA11-43CB-A59F-861845A53967",
+      "lastModified": "2017-07-20T13:36:52.248+12:00",
+      "name": "/{id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "04B26D75-902A-4643-BAD3-54E0A851855A"
+    },
+    {
+      "type": "Service",
+      "id": "3D2886BF-CE9A-462C-9251-6D5F8321A69D",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "sessions",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"user\": {\n    \"email\": \"john@doe.com\",\n    \"password\": \"12121212\"\n  }\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v3",
+        "path": "/sessions"
+      },
+      "description": "create a report",
+      "id": "A705C1E3-0CC8-464A-B3EA-F9BB82609F64",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "assertions": [
+        {
+          "comparison": "Equals",
+          "subject": "ResponseStatus",
+          "path": "code",
+          "value": "201"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "3D2886BF-CE9A-462C-9251-6D5F8321A69D"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"user\": {\n    \"email\": \"john@doe.com\",\n    \"password\": \"12121212\"\n  }\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v3",
+        "path": "/sessions/me"
+      },
+      "description": "create a report",
+      "id": "9D6336E1-B2FB-4C70-93AA-238BF7B5D8F6",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "/ #destroy",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        }
+      ],
+      "assertions": [
+        {
+          "comparison": "Equals",
+          "subject": "ResponseStatus",
+          "path": "code",
+          "value": "201"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "3D2886BF-CE9A-462C-9251-6D5F8321A69D"
+    },
+    {
+      "type": "Service",
+      "id": "1A79F0E4-F4F3-4145-8761-10FCF0A2B51E",
+      "lastModified": "2017-07-20T13:36:52.248+12:00",
+      "name": "users",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"user\": {\n    \"email\": \"john@doe.com\",\n    \"password\": \"12121212\"\n  }\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v3",
+        "path": "/users"
+      },
+      "description": "create a report",
+      "id": "767ECA3E-5839-4EE1-9EB0-A099D5E544B7",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "assertions": [
+        {
+          "comparison": "Equals",
+          "subject": "ResponseStatus",
+          "path": "code",
+          "value": "201"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "1A79F0E4-F4F3-4145-8761-10FCF0A2B51E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/users/{user_id}"
+      },
+      "id": "7C8CAD0F-CDC7-41CF-9BB9-179CEFAEB32B",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "/{id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "1A79F0E4-F4F3-4145-8761-10FCF0A2B51E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc5789",
+        "name": "PATCH"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"first_name\": \"f1\",\n  \"last_name\": \"l1\",\n  \"email\": \"e@m1.com\",\n  \"description\": \"d1\",\n  \"time_zone\": \"Auckland\",\n  \"password\": \"123123123\",\n  \"password_confirmation\": \"123123123\",\n  \"current_password\": \"12121212\"\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/users/{user_id}"
+      },
+      "id": "424D75CF-4A89-415A-BD06-BA2286D1DABA",
+      "lastModified": "2017-07-20T13:36:52.249+12:00",
+      "name": "/{id} #update",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "1A79F0E4-F4F3-4145-8761-10FCF0A2B51E"
+    },
+    {
+      "type": "Service",
+      "id": "D3249C9E-D446-4819-8881-B963160B768C",
+      "lastModified": "2017-07-20T13:36:52.250+12:00",
+      "name": "users/{user_id}/assigned_reports",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v3",
+        "path": "/users/{user_id}/assigned_reports.json"
+      },
+      "id": "9926D888-B2F9-4CC4-B99D-884C07B8FED6",
+      "lastModified": "2017-07-20T13:36:52.250+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "D3249C9E-D446-4819-8881-B963160B768C"
+    },
+    {
+      "type": "Service",
+      "id": "9E4767EA-DC8C-4368-AF50-39124F335786",
+      "lastModified": "2017-07-20T13:36:52.250+12:00",
+      "name": "users/{user_id}/report_comments",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/users/{user_id}/report_comments"
+      },
+      "id": "8A8AF034-1E14-42A4-9215-4E9495C69887",
+      "lastModified": "2017-07-20T13:36:52.250+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "9E4767EA-DC8C-4368-AF50-39124F335786"
+    },
+    {
+      "type": "Service",
+      "id": "D05FC9DE-7592-4B91-99F6-09C2C1896A35",
+      "lastModified": "2017-07-20T13:36:52.250+12:00",
+      "name": "users/{user_id}/reports",
+      "parentId": "D45D8CCA-892A-4896-B52C-749A479F75F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v3/users/{user_id}/reports.json"
+      },
+      "id": "35A6FCBA-B775-4EFE-A15F-D39CA0189104",
+      "lastModified": "2017-07-20T13:36:52.250+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "D05FC9DE-7592-4B91-99F6-09C2C1896A35"
+    },
+    {
+      "type": "Project",
+      "id": "B4D78B6C-35E1-444B-B04A-914C45A9463E",
+      "lastModified": "2017-07-20T13:36:52.254+12:00",
+      "name": "V4"
+    },
+    {
+      "type": "Service",
+      "id": "44F3B405-44EC-40FF-BD18-FBAB3DAA5448",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "analytics",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "channel_id",
+              "value": "{channel_id}"
+            },
+            {
+              "enabled": true,
+              "name": "start_date",
+              "value": "2016-10-21T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "end_date",
+              "value": "2016-12-20T00:00:00Z"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/analytics/reports_images"
+      },
+      "id": "93558458-0C63-4F3B-B786-74D8AE27CAA1",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/reports_images #reports_images",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "44F3B405-44EC-40FF-BD18-FBAB3DAA5448"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "channel_id",
+              "value": "{channel_id}"
+            },
+            {
+              "enabled": true,
+              "name": "start_date",
+              "value": "2016-10-21T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "end_date",
+              "value": "2016-12-25T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "fields",
+              "value": "total_reads,unique_reads,report_readers,reports_seen"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/analytics/reports_made"
+      },
+      "id": "37C21C4C-D803-4A09-B667-E6824399729F",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/reports_made #reports_made",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "44F3B405-44EC-40FF-BD18-FBAB3DAA5448"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "channel_id",
+              "value": "{channel_id}"
+            },
+            {
+              "enabled": true,
+              "name": "start_date",
+              "value": "2016-10-21T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "end_date",
+              "value": "2016-12-20T00:00:00Z"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/analytics/reports_over_time"
+      },
+      "id": "AD0212ED-8CD8-4AB5-A707-1D6847345FAF",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/reports_over_time #reports_over_time",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "44F3B405-44EC-40FF-BD18-FBAB3DAA5448"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "channel_id",
+              "value": "{channel_id}"
+            },
+            {
+              "enabled": true,
+              "name": "start_date",
+              "value": "2016-10-21T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "end_date",
+              "value": "2016-12-20T00:00:00Z"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/analytics/reports_per_day_hour"
+      },
+      "id": "1432AF7B-DF88-4ADD-A0BD-B2C22FA8BDCD",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/reports_per_day_hour #reports_per_day_hour",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "44F3B405-44EC-40FF-BD18-FBAB3DAA5448"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "field_id",
+              "value": "{field_id}"
+            },
+            {
+              "enabled": true,
+              "name": "channel_id",
+              "value": "{channel_id}"
+            },
+            {
+              "enabled": true,
+              "name": "start_date",
+              "value": "2016-10-21T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "end_date",
+              "value": "2016-12-25T00:00:00Z"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/analytics/reports_per_field_selection"
+      },
+      "id": "34034B43-B70A-4F76-809B-C1DF93C5B77F",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/reports_per_field_selection #reports_per_field_selection",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "44F3B405-44EC-40FF-BD18-FBAB3DAA5448"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "channel_id",
+              "value": "{channel_id}"
+            },
+            {
+              "enabled": true,
+              "name": "start_date",
+              "value": "2016-10-21T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "end_date",
+              "value": "2016-12-20T00:00:00Z"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/analytics/reports_per_state"
+      },
+      "id": "2E6EB8CC-CAFB-4B12-967B-523130ECF3AD",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/reports_per_state #reports_per_state",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "44F3B405-44EC-40FF-BD18-FBAB3DAA5448"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "channel_id",
+              "value": "{channel_id}"
+            },
+            {
+              "enabled": true,
+              "name": "start_date",
+              "value": "2016-10-21T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "end_date",
+              "value": "2016-12-25T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "fields",
+              "value": "total_reads,unique_reads,report_readers,reports_seen"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/analytics/reports_per_user"
+      },
+      "id": "6224CEAE-5A9A-4DB4-9A9A-03363355F865",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/reports_per_user #reports_per_user",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "44F3B405-44EC-40FF-BD18-FBAB3DAA5448"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "channel_id",
+              "value": "{channel_id}"
+            },
+            {
+              "enabled": true,
+              "name": "start_date",
+              "value": "2016-10-21T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "end_date",
+              "value": "2016-12-20T00:00:00Z"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/analytics/reports_per_week_day"
+      },
+      "id": "1604084B-76CA-42DA-8AF8-EAFFADEC8650",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/reports_per_week_day #reports_per_week_day",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "44F3B405-44EC-40FF-BD18-FBAB3DAA5448"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "channel_id",
+              "value": "{channel_id}"
+            },
+            {
+              "enabled": true,
+              "name": "start_date",
+              "value": "2016-10-21T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "end_date",
+              "value": "2016-12-20T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "fields",
+              "value": "total_reads,unique_reads,report_readers,reports_seen"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/analytics/reports_read"
+      },
+      "id": "06ADC4B9-D52E-4187-AC5A-5CE9FDEDB9A9",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/reports_read #reports_read",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "44F3B405-44EC-40FF-BD18-FBAB3DAA5448"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "channel_id",
+              "value": "{channel_id}"
+            },
+            {
+              "enabled": true,
+              "name": "start_date",
+              "value": "2016-10-21T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "end_date",
+              "value": "2016-12-20T00:00:00Z"
+            },
+            {
+              "enabled": true,
+              "name": "fields",
+              "value": "total_alerts,users_alerted,alert_source_reports,unique_alerts,alerts_opened"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/analytics/user_awareness"
+      },
+      "id": "A72FF6FC-281B-4A5E-8496-68B6A4D23154",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/user_awareness #user_awareness",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "44F3B405-44EC-40FF-BD18-FBAB3DAA5448"
+    },
+    {
+      "type": "Service",
+      "id": "13188274-347B-4832-9B06-A7DBAA30EAB1",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "channels",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"channel\": {\n    \"name\": \"Api Created Channel6\"\n  }\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels"
+      },
+      "id": "DA02B90C-263A-467A-857A-449AAC380540",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "13188274-347B-4832-9B06-A7DBAA30EAB1"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels"
+      },
+      "id": "9CF0387D-828A-4658-B934-40301CEE1EF3",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "13188274-347B-4832-9B06-A7DBAA30EAB1"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/channels/{channel_id}"
+      },
+      "id": "A408CC98-6A9A-48EB-BD24-D855B57A6EF3",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "/{channel_id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "13188274-347B-4832-9B06-A7DBAA30EAB1"
+    },
+    {
+      "type": "Service",
+      "id": "4A1BF84E-08C3-4D66-BB30-ABD78DD8694F",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "channels/{channel_id}/categories",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  parent_id: 1,\n  name: \"anyhlt\",\n}\n  "
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels/{channel_id}/categories"
+      },
+      "id": "D53D649F-646D-48D4-8B21-A4FF0659383D",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "4A1BF84E-08C3-4D66-BB30-ABD78DD8694F"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels/{channel_id}/categories"
+      },
+      "id": "3E5E26CC-92ED-4700-8D51-5800EF6A7CDB",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "4A1BF84E-08C3-4D66-BB30-ABD78DD8694F"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels/{channel_id}/categories/{category_id}"
+      },
+      "id": "82E00EC4-EB8E-43FD-8157-50418911B4BC",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "/{id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "4A1BF84E-08C3-4D66-BB30-ABD78DD8694F"
+    },
+    {
+      "type": "Service",
+      "id": "F9F96E3F-BDAF-4B3D-AF71-F8EAADD0E352",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "channels/{channel_id}/form",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels/{channel_id}/form"
+      },
+      "id": "75664439-9EB6-427D-9406-BD03567E9E2D",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "/ #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "F9F96E3F-BDAF-4B3D-AF71-F8EAADD0E352"
+    },
+    {
+      "type": "Service",
+      "id": "54243025-91FF-4342-9583-1577A7F6C562",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "channels/{channel_id}/report_states",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "[\n  {\n    \"id\": 38,\n    \"position\": 1\n  },\n  {\n    \"id\": 39,\n    \"position\": 2\n  },\n  {\n    \"id\": 40,\n    \"position\": 3\n  }\n]\n  \n    "
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/channels/{channel_id}/report_states"
+      },
+      "id": "727643A6-9398-48B2-8A46-9865A00A0406",
+      "lastModified": "2017-07-20T13:36:52.258+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "54243025-91FF-4342-9583-1577A7F6C562"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc5789",
+        "name": "PATCH"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "[\n  {\n    \"id\": 38,\n    \"position\": 1\n  },\n  {\n    \"id\": 39,\n    \"position\": 2\n  },\n  {\n    \"id\": 40,\n    \"position\": 3\n  }\n]\n  \n    "
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels/{channel_id}/report_states/"
+      },
+      "id": "CE3BEBA8-19E5-4A9D-BB0E-C9BF28EFB84A",
+      "lastModified": "2017-07-20T13:36:52.258+12:00",
+      "name": "/ #update_collection",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "apchannelsplication/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "54243025-91FF-4342-9583-1577A7F6C562"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "[\n  {\n    \"id\": 38,\n    \"position\": 1\n  },\n  {\n    \"id\": 39,\n    \"position\": 2\n  },\n  {\n    \"id\": 40,\n    \"position\": 3\n  }\n]\n  \n    "
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/channels/{channel_id}/report_states/{report_state_id}"
+      },
+      "id": "63AED094-A1DA-4663-8CC0-AA92B6FA411A",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "/{report_state_id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "54243025-91FF-4342-9583-1577A7F6C562"
+    },
+    {
+      "type": "Service",
+      "id": "C0D88FBE-9CEF-4512-BB8E-D9829F4CD9F6",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "channels/{channel_id}/reports",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels/{channel_id}/reports"
+      },
+      "description": "",
+      "id": "B7A303BE-656D-4522-BFF9-340C19E66B6E",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        }
+      ],
+      "assertions": [],
+      "metaInfo": {},
+      "parentId": "C0D88FBE-9CEF-4512-BB8E-D9829F4CD9F6"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels/{channel_id}/reports/{report_id}"
+      },
+      "description": "",
+      "id": "608657CA-D99D-490A-80AB-F42B2DEA240D",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "/{id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        }
+      ],
+      "assertions": [],
+      "metaInfo": {},
+      "parentId": "C0D88FBE-9CEF-4512-BB8E-D9829F4CD9F6"
+    },
+    {
+      "type": "Service",
+      "id": "DC0ADB31-2BE9-4139-A9C8-4B6460943ACC",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "channels/{channel_id}/tiles/reports",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "area",
+              "value": "{tile_area}"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels/{channel_id}/tiles/reports"
+      },
+      "id": "F7F9F23A-88FC-4A95-BF5F-2EA42309FF50",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "DC0ADB31-2BE9-4139-A9C8-4B6460943ACC"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels/{channel_id}/tiles/reports/{report_tile_id}"
+      },
+      "id": "B6FC7DC7-C04C-44BA-99DF-19419B659FF9",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "/{id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "DC0ADB31-2BE9-4139-A9C8-4B6460943ACC"
+    },
+    {
+      "type": "Service",
+      "id": "2AC0BA21-2C54-4A7A-BA1E-8D409E412F71",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "channels/{channel_id}/users",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "name": "fields",
+              "value": "id,full_name"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/channels/{channel_id}/users"
+      },
+      "id": "ED59A08C-5E94-4D9A-A866-62B1608B5AB3",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "2AC0BA21-2C54-4A7A-BA1E-8D409E412F71"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels/{channel_id}/users/{user_id}"
+      },
+      "id": "F91307CC-A7B8-487A-9860-E49A034B0741",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "/{user_id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "2AC0BA21-2C54-4A7A-BA1E-8D409E412F71"
+    },
+    {
+      "type": "Service",
+      "id": "4AE3475E-B405-4494-B181-9CE6BA2A16EA",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "clients",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"client\": {\n  \t\"channels\": [1]\n  }\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/clients"
+      },
+      "id": "D7424A03-E296-4F21-849A-1F6918C46F07",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "/ #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "4AE3475E-B405-4494-B181-9CE6BA2A16EA"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc5789",
+        "name": "PATCH"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"client\": {\n  \t\"channels\": [1]\n  }\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/clients"
+      },
+      "id": "357B8A78-07E4-4956-8899-2B6E9270071A",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "/ #update",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "4AE3475E-B405-4494-B181-9CE6BA2A16EA"
+    },
+    {
+      "type": "Service",
+      "id": "042CBC9F-BED9-420F-934A-54AA140FC5BF",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "clients/channel_selections",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"channel_selection\": {\n     \"channel_id\": 3\n   }\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/clients/channel_selections"
+      },
+      "id": "0D9F7540-101A-4C9C-9920-ABD6BF097215",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "042CBC9F-BED9-420F-934A-54AA140FC5BF"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"channel_selection\": {\n     \"channel_id\": 3\n   }\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/clients/channel_selections/1"
+      },
+      "id": "6E548A99-8EAD-4684-A64F-CB36E9341E59",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "/{:channel_id} #destroy",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "042CBC9F-BED9-420F-934A-54AA140FC5BF"
+    },
+    {
+      "type": "Service",
+      "id": "4C0EFDB7-0D12-4A10-BE46-18AE2B6479C4",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "file_attachments",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"file_attachment\": {\n    \"key\": \"${\"s3_uploaded_file_key\"}\"\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/file_attachments"
+      },
+      "id": "FDE7F846-07A0-4EA4-9447-6C518A1C1F09",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "4C0EFDB7-0D12-4A10-BE46-18AE2B6479C4"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "content_type",
+              "value": "image/png"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/file_attachments/upload_authorization"
+      },
+      "id": "62F6182E-E9E7-48DE-ACCC-480EE97049F3",
+      "lastModified": "2017-07-20T13:36:52.257+12:00",
+      "name": "/upload_authorization #upload_authorization",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "4C0EFDB7-0D12-4A10-BE46-18AE2B6479C4"
+    },
+    {
+      "type": "Service",
+      "id": "73EA7CA4-AD3A-4B6C-BC23-8117B0BF34C6",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "note_comments",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/note_comments/{note_comment_id}"
+      },
+      "id": "E3F3A0D4-84D1-4EC5-B358-B62CBB1AF3B3",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "/{note_comment_id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "73EA7CA4-AD3A-4B6C-BC23-8117B0BF34C6"
+    },
+    {
+      "type": "Service",
+      "id": "54BAB7A6-1E23-4EF6-A8DD-2FBE78014911",
+      "lastModified": "2017-07-20T13:36:52.258+12:00",
+      "name": "report_searches",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  report: {\n    \"source_id\": \"test07\",\n    \"account_id\": ${'channel_id'},\n    \"f_497_1_d_2_2\": \"describe test 07-d\",\n    \"f_497_6_4\": \"short content\",\n    \"f_497_1_d_2_1\": [1606639],\n    \"address\": \"53 hazlewood avenue. Karori. Wellington.\",\n\t\"category_names\": [\"top\", \"middle\"]\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/report_searches/{report_search_id}"
+      },
+      "id": "D8A75403-FF48-4AED-806F-A07777B7B91F",
+      "lastModified": "2017-07-20T13:36:52.258+12:00",
+      "name": "/{report_search_id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "54BAB7A6-1E23-4EF6-A8DD-2FBE78014911"
+    },
+    {
+      "type": "Service",
+      "id": "2C49D694-7171-4FF5-BD3A-B9DD94F12237",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "reports",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"report\": {\n    \"account_id\": ${'channel_id'},\n    \"f_497_24_1\": 87474,\n    \"f_497_1_d_2_2\": \"describe test 07\",\n    \"f_497_6_4\": \"short content\",\n    \"f_497_1_d_2_1\": [1606639],\n    \"address\": \"53 hazlewood avenue. Karori. Wellington.\"\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/reports"
+      },
+      "description": "create a report",
+      "id": "EC63954D-55D6-41F9-9169-0EC337D7D9AD",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "assertions": [
+        {
+          "comparison": "Equals",
+          "subject": "ResponseStatus",
+          "path": "code",
+          "value": "201"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "2C49D694-7171-4FF5-BD3A-B9DD94F12237"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  report: {\n    \"source_id\": \"test07\",\n    \"account_id\": ${'channel_id'},\n    \"f_497_1_d_2_2\": \"describe test 07-d\",\n    \"f_497_6_4\": \"short content\",\n    \"f_497_1_d_2_1\": [1606639],\n    \"address\": \"53 hazlewood avenue. Karori. Wellington.\",\n\t\"category_names\": [\"top\", \"middle\"]\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "filter[channels]",
+              "value": "[1784,1947]"
+            },
+            {
+              "enabled": true,
+              "name": "filter[tile_id]",
+              "value": "ZmZmZmbWZUBmZmZmZqZEwJqZmZmZmak/"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/reports/search"
+      },
+      "id": "C3DF4028-B70B-4BE4-9E1B-524CF014EB86",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/search #search",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "2C49D694-7171-4FF5-BD3A-B9DD94F12237"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"report\": {\n    \"source_id\": \"test07\",\n    \"account_id\": ${'channel_id'},\n    \"f_497_1_d_2_2\": \"describe test 07-d\",\n    \"f_497_6_4\": \"short content\",\n    \"f_497_1_d_2_1\": [1606639],\n    \"address\": \"53 hazlewood avenue. Karori. Wellington.\",\n    \"category_names\": [\"top\", \"middle\"],\n    \"shape_id\": 4\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/reports/upsert"
+      },
+      "id": "394A8375-ED78-439D-9CA1-94269B150EB3",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "/upsert #upsert",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "2C49D694-7171-4FF5-BD3A-B9DD94F12237"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  report: {\n    \"source_id\": \"test07\",\n    \"account_id\": ${'channel_id'},\n    \"f_497_1_d_2_2\": \"describe test 07-d\",\n    \"f_497_6_4\": \"short content\",\n    \"f_497_1_d_2_1\": [1606639],\n    \"address\": \"53 hazlewood avenue. Karori. Wellington.\",\n\t\"category_names\": [\"top\", \"middle\"]\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/reports/{report_id}"
+      },
+      "id": "6E1AB2C1-F576-4F47-BFF2-BB4B537F30A8",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "/{report_id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "2C49D694-7171-4FF5-BD3A-B9DD94F12237"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc5789",
+        "name": "PATCH"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"report\": {\n    \"f_497_1_d_2_2\": \"describe test 07-d\",\n    \"f_497_6_4\": \"short content\",\n    \"f_497_1_d_2_1\": [1606639],\n    \"address\": \"53 hazlewood avenue. Karori. Wellington.\",\n    \"category_names\": [\"top\", \"middle\"],\n    \"shape_id\": null\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/reports/{report_id}"
+      },
+      "id": "886D41D8-24E4-46F2-A333-7E8F09EDCF8D",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/{report_id} #update",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "2C49D694-7171-4FF5-BD3A-B9DD94F12237"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"report_read\": {\n    \"created_at\": \"2015-01-01T00:00:00UTC\"\n  }\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/reports/{report_id}/report_reads"
+      },
+      "description": "create a report",
+      "id": "30FDA8BC-B6DA-4D80-85F5-EE4A461385B2",
+      "lastModified": "2017-07-20T13:36:52.255+12:00",
+      "name": "/{report_id}/report_reads #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "assertions": [
+        {
+          "comparison": "Equals",
+          "subject": "ResponseStatus",
+          "path": "code",
+          "value": "201"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "2C49D694-7171-4FF5-BD3A-B9DD94F12237"
+    },
+    {
+      "type": "Service",
+      "id": "7C9C213E-A1E8-4CCF-8D51-A04433E8E2C2",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "reports/{report_id}/signatures",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"report_signature\": {\n    \"signee_name\": \"Rafael\"\n  }\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/reports/{report_id}/signatures"
+      },
+      "id": "3E8269DE-60A2-4B02-8C21-E5584057EC19",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "7C9C213E-A1E8-4CCF-8D51-A04433E8E2C2"
+    },
+    {
+      "type": "Service",
+      "id": "A8590144-D342-44F4-9E66-CB4F3FE904AB",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "shape_searches",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"filter\": {\n    \"tile_id\": \"ZmZmZmbWZUBmZmZmZqZEwJqZmZmZmak/\"\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/shape_searches"
+      },
+      "id": "F1C93552-E6D1-48AE-9DBE-764FA191A360",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "A8590144-D342-44F4-9E66-CB4F3FE904AB"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/shape_searches/{shape_search_id}/shapes"
+      },
+      "id": "C073E0E1-75D4-4460-8C00-A88CC295EE56",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "/{shape_search_id/shapes shapes#index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "A8590144-D342-44F4-9E66-CB4F3FE904AB"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  report: {\n    \"source_id\": \"test07\",\n    \"account_id\": ${'channel_id'},\n    \"f_497_1_d_2_2\": \"describe test 07-d\",\n    \"f_497_6_4\": \"short content\",\n    \"f_497_1_d_2_1\": [1606639],\n    \"address\": \"53 hazlewood avenue. Karori. Wellington.\",\n\t\"category_names\": [\"top\", \"middle\"]\n  }\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/shape_searches/{shape_search_id}"
+      },
+      "id": "622B8358-C8D6-4116-853A-C64885E8F0F4",
+      "lastModified": "2017-07-20T13:36:52.260+12:00",
+      "name": "/{shape_search_id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "name": "If-None-Match",
+          "value": "W/\"79abcb6b0110d84791758a2a33004bff\""
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "A8590144-D342-44F4-9E66-CB4F3FE904AB"
+    },
+    {
+      "type": "Service",
+      "description": "",
+      "id": "6DF8EADA-506B-450F-9A47-DD0034918A4E",
+      "lastModified": "2017-07-20T13:36:52.258+12:00",
+      "name": "shapes",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"shape\": {\n     \"geom\": \"LINESTRING(174.7719870507717 -41.283941676531704, 174.77259188890457 -41.28406260902993)\"\n   }\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/shapes"
+      },
+      "id": "B8B432A8-A330-49F0-A24A-5CDFF34EFFD7",
+      "lastModified": "2017-07-20T13:36:52.259+12:00",
+      "name": "/ #create",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "6DF8EADA-506B-450F-9A47-DD0034918A4E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/shapes"
+      },
+      "id": "FC67B19B-31CC-481E-9F49-532135FB25E3",
+      "lastModified": "2017-07-20T13:36:52.259+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "6DF8EADA-506B-450F-9A47-DD0034918A4E"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": ""
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "filter[tile_id]",
+              "value": "ZmZmZmbWZUBmZmZmZqZEwJqZmZmZmak/"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/shapes/search"
+      },
+      "id": "C64E4A64-AE8A-4822-B69B-C3DD3BF6B595",
+      "lastModified": "2017-07-20T13:36:52.259+12:00",
+      "name": "/search tiles_searches#create (compatibility)",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "6DF8EADA-506B-450F-9A47-DD0034918A4E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/shapes/{shape_id}"
+      },
+      "id": "61B139D6-565E-4EA1-9D98-E13A85AF1A67",
+      "lastModified": "2017-07-20T13:36:52.259+12:00",
+      "name": "/{shape_id} #destroy",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "6DF8EADA-506B-450F-9A47-DD0034918A4E"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/shapes/{shape_id}"
+      },
+      "id": "44C1DEA0-07D8-4E40-9E7E-FB4FEFF83917",
+      "lastModified": "2017-07-20T13:36:52.259+12:00",
+      "name": "/{shape_id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "6DF8EADA-506B-450F-9A47-DD0034918A4E"
+    },
+    {
+      "type": "Service",
+      "id": "3173F115-8975-427F-BD30-B0E96EB734A7",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "tiles",
+      "parentId": "B4D78B6C-35E1-444B-B04A-914C45A9463E"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "scale",
+              "value": "0.5"
+            },
+            {
+              "enabled": true,
+              "name": "area",
+              "value": "POLYGON((174.7423553466797 -41.23672096972096,174.89341735839844 -41.23672096972096,174.89341735839844 -41.34403400489993,174.7423553466797 -41.34403400489993,174.7423553466797 -41.23672096972096))"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/tiles"
+      },
+      "id": "0AC02BAC-1FAC-45C8-B835-60657E820AFA",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/ #index",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "3173F115-8975-427F-BD30-B0E96EB734A7"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/tiles/{tile_id}"
+      },
+      "id": "BBF9F1A7-1444-401A-B70A-FEE122A36862",
+      "lastModified": "2017-07-20T13:36:52.256+12:00",
+      "name": "/{tile_id} #show",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "X-InstallationID",
+          "value": "{installation_id}"
+        },
+        {
+          "enabled": true,
+          "name": "X-AppID",
+          "value": "{app_id}"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "3173F115-8975-427F-BD30-B0E96EB734A7"
+    },
+    {
+      "type": "Project",
+      "id": "4748A3E1-7092-47E8-90F4-301E8CD4C8F5",
+      "lastModified": "2017-07-20T13:36:52.272+12:00",
+      "name": "Zapier"
+    },
+    {
+      "type": "Service",
+      "id": "B8BF1788-EAB0-4136-A7D3-7C466D12A407",
+      "lastModified": "2017-07-20T13:36:52.272+12:00",
+      "name": "channels/{channel_id}/form_fields",
+      "parentId": "4748A3E1-7092-47E8-90F4-301E8CD4C8F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "path": "{host}/api/v4/channels/{channel_id}/form_fields"
+      },
+      "id": "C73865CE-5C06-44D7-8986-D20EAA265840",
+      "lastModified": "2017-07-20T13:36:52.273+12:00",
+      "name": "/ #form_fields",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Token token={api_token}"
+        },
+        {
+          "enabled": true,
+          "name": "User-Agent",
+          "value": "Zapier"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "B8BF1788-EAB0-4136-A7D3-7C466D12A407"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/hooks/auth_status.json"
+      },
+      "id": "DDF8024E-348F-4E7C-A6E7-BF9BDB103753",
+      "lastModified": "2017-07-20T13:36:52.273+12:00",
+      "name": "hooks/auth_status",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "User-Agent",
+          "value": "Zapier"
+        },
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Bearer {bearer_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "4748A3E1-7092-47E8-90F4-301E8CD4C8F5"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "{scheme}",
+          "version": "V11"
+        },
+        "host": "{host}/api/v4",
+        "path": "/hooks/server_status.json"
+      },
+      "id": "3534A8E6-CF72-40DD-81EB-A884834298AD",
+      "lastModified": "2017-07-20T13:36:52.272+12:00",
+      "name": "hooks/server_status",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "User-Agent",
+          "value": "Zapier"
+        },
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Bearer {bearer_token}"
+        },
+        {
+          "enabled": true,
+          "name": "Cookie",
+          "value": "a=0"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "4748A3E1-7092-47E8-90F4-301E8CD4C8F5"
+    },
+    {
+      "type": "Context",
+      "contextType": "Global",
+      "id": "AAC4E14F-370E-4B35-9099-03A763320E44",
+      "lastModified": "2017-07-20T13:41:58.674+12:00",
+      "name": "settings",
+      "variables": [
+        {
+          "enabled": true,
+          "name": "scheme",
+          "value": "https"
+        },
+        {
+          "enabled": true,
+          "name": "host",
+          "value": "api1.thundermaps.com"
+        },
+        {
+          "enabled": true,
+          "name": "app_id",
+          "value": "com.thundermaps.main"
+        },
+        {
+          "enabled": true,
+          "name": "installation_id",
+          "value": ">>-provide-unique-random-string-here-<<"
+        },
+        {
+          "enabled": true,
+          "name": "api_token",
+          "value": ">>-provide-your-api-token-here-<<"
+        }
+      ]
+    }
+  ]
+}
